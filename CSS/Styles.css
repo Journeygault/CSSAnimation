@@ -1,0 +1,787 @@
+/******************************************************************************************
+1.General Styles
+2.Headder
+3.Truck 
+4.Footer 
+5.Animations
+6.Media Queries
+
+================================
+MEDIA QUERIES
+=================================
+
+******************************************************************************************/
+/*1.General Styles*/
+html {
+    box-sizing: border-box;
+    }
+    *, *:before, *:after {
+    box-sizing: inherit; }
+body{
+    background-color: lightgray;
+}
+
+a {
+    color: red;
+}
+    a:hover{
+    
+    transition: all 1s;
+    transform: scale(1.5);
+    color:blue;
+}
+h1{
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-top:2em;
+    margin-bottom:2em;
+}
+
+h1:hover{
+    animation-name: h1colorchange;
+    animation-duration: 4s; 
+    animation-iteration-count: infinite;
+    animation-direction: normal; 
+    animation-timing-function: ease; 
+    animation-fill-mode: none; 
+    animation-delay: 1s; 
+    animation-play-state: running; 
+}
+p{
+    margin-left:100px;
+    margin-bottom: 3em;
+    font-family: 'Orbitron', sans-serif;
+} 
+/* 2.Headder */
+header{
+    margin:0;
+    height:100px;
+    background-color: black;
+    padding-bottom: 50px;
+    display: flex;
+    margin:0;
+    padding-left:50px;
+    padding-bottom:10px;
+    padding-right:50px;
+    margin-top:-10px;
+    margin-left:-10px;
+    margin-right:-10px;
+}
+#Navcontainer{
+    display: flex;
+}
+#red{
+    color : #bf201b;
+}
+#blue{
+    color:blue
+}
+
+#navigation{
+    flex:1 0 0;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+}
+    /* Nav */
+
+ul{
+    list-style-type: none;
+
+}
+li{ 
+    margin-left:15%;
+    float:left;
+}
+    
+li a {
+    text-decoration: none;
+    display: block;
+    padding-top:25px;
+}
+     
+#logo{
+    flex:1 0 0;
+    color:white;
+    font-size:50px;
+    margin:0;
+    padding-bottom:40px;
+}
+#playstate{
+    background-color:#bf201b;
+    color:blue;
+    height:100px;
+    width:200px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left:100px;
+    font-weight: bolder;
+    /* font-family: 'Orbitron', sans-serif; TOO DIFICULT TO READ */
+    font-family: Arial, Helvetica, sans-serif;
+}
+#playstate:hover{
+    background-color:blue;
+    color:#bf201b;
+    animation-name: wiggle;
+    animation-duration: 1s; 
+    animation-direction: alternate;
+}
+#message{
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+}
+
+#truckMargin{
+    margin-left:200px;
+    height:300px;
+}
+/* 3. Truck */
+#truck{
+    margin-top:80px;
+    margin-bottom:200px;
+    padding:0;
+    animation-name: drive-in;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; 
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: none; 
+    animation-delay: 0s;
+    animation-play-state: running;
+}
+    /* Chest and smokestack */
+#cabChest{
+    width: 120px;
+    height: 200px;
+    background-color: #bf201b;
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    
+}
+#smokestack{
+    width: 20px;
+    height: 60px;
+    top:0;
+    background-color: #bf201b;
+    position: absolute;
+    margin-left:100px;
+    margin-top:-60px
+}
+#smokestacktriangle {
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #bf201b;
+    border-left: 20px solid transparent;
+    position: absolute;
+    margin-top:-20px;
+  }
+  #smoke1{
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    margin-left: -10px;
+    margin-top:10px;
+    z-index: -1;
+
+    animation-name: smoke1;
+    animation-duration: 2.4s; 
+    animation-iteration-count: infinite;
+    animation-direction: normal; 
+    animation-timing-function: ease; 
+    animation-fill-mode: none; 
+    animation-delay: 1s; 
+    animation-play-state: running; 
+  }
+  #smoke2{
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    margin-left: -10px;
+    margin-top:10px;
+    z-index: -1;
+
+    animation-name: smoke2;
+    animation-duration: 1.3s; 
+    animation-iteration-count: infinite;
+    animation-direction: normal; 
+    animation-timing-function: ease; 
+    animation-fill-mode: none; 
+    animation-delay: 1s; 
+    animation-play-state: running; 
+  }
+  #smoke3{
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    margin-left: -10px;
+    margin-top:10px;
+    z-index: -1;
+    animation-name: smoke3;
+    animation-duration: 0.9s; 
+    animation-iteration-count: infinite;
+    animation-direction: normal; 
+    animation-timing-function: ease; 
+    animation-fill-mode: none; 
+    animation-delay: 1s; 
+    animation-play-state: running; 
+  }
+    /* Right Arm */
+#rightArm{
+    margin-left:50%;
+    width: 40px;
+    height: 150px;
+    background-color: #bf201b;
+    display: block;
+    margin-left:50px;
+}    
+#rightArm:hover{
+    animation-name: right-forarm-move;
+    animation-duration: 1s; 
+    animation-iteration-count: 1; 
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards; 
+    animation-delay: 0s; 
+    animation-play-state: paused; 
+}
+#forarmRarm{
+    width: 40px;
+    height: 150px;
+    background-color: #bf201b;
+    display: block;
+    animation-name: right-forarm;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; 
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards; 
+    animation-delay: 0s; 
+    animation-play-state: paused; 
+}  
+#rightHand{
+    width: 40px;
+    height: 40px;
+    margin:0;
+    padding:0;
+    background-color: #bf201b;
+    animation-name: right-hand;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; /* default */ 
+    animation-direction: alternate; /* default */ 
+    animation-timing-function: ease; /* default */ 
+    animation-fill-mode: forwards;  /* default */ 
+    animation-delay: 0s; /* default */;
+    animation-play-state: paused;
+}
+/* Head */
+#head{
+    width: 50px;
+    height: 50px;
+    top:0;
+    left:35%;
+    background-color: #bf201b;
+    position: absolute;
+    z-index: 10;
+    animation-name: head-flip;
+    animation-duration: 4s; 
+    animation-iteration-count: 1;
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards; 
+    animation-delay: 0s; 
+    animation-play-state: paused; 
+}
+
+
+#leftEye{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px; 
+    background-color:  #bf201b;
+    display: inline-block;
+    color: #fff;
+    margin-left:20px;
+
+    animation-name: eyes;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; 
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards;  
+    animation-delay: 0s;
+    animation-play-state: paused;
+    z-index: -1;
+}
+#rightEye{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px; 
+    background-color:  #bf201b;
+    display: inline-block;
+    color: #fff;
+    margin-top:30px;
+    animation-name: eyes;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; 
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards; 
+    animation-delay: 0s;
+    animation-play-state: paused;
+    z-index: -1;
+    }
+/* Left Arm */
+#forarmLarm{
+    width: 40px;
+    height: 150px;
+    background-color: #bf201b;
+    display: block;
+    margin:0;
+    padding:0;
+}
+#leftArm{
+    display: inline-block;
+    margin:0;
+    padding:0;
+    animation-name: left-arm;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; 
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards;  
+    animation-delay: 0s; 
+    animation-play-state: paused; 
+}
+#leftArm:hover{
+    display: inline-block;
+    margin:0;
+    padding:0;
+    animation-name: left-arm-move;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; 
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards;  
+    animation-delay: 0s; 
+    animation-play-state: paused; 
+}
+#leftHand{
+    width: 40px;
+    height: 40px;
+    margin:0;
+    padding:0;
+    background-color: #bf201b;
+    display: block;
+    animation-name: left-hand;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; 
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards; 
+    animation-delay: 0s; 
+    animation-play-state: paused;
+}
+#lHandAndForArm{
+    display:inline;
+}
+#LhandandFarm{
+    margin:0;
+    padding:0;
+    display: inline-block;
+    position:absolute;
+    z-index: -1;
+    animation-name: left-forarm;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; 
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards;  
+    animation-delay: 0s; 
+    animation-play-state: paused;
+    padding:0;
+}
+#cabLArm{
+    width: 40px;
+    height: 200px;
+    background-color: #bf201b;
+    display: block;
+    position: relative;
+    margin:0;
+    padding:0;
+    z-index: -1;
+} 
+    /*Legs  */
+#legs{
+    display: inline-block;
+}
+#leftTheigh{
+    padding:0;
+    width: 200px;
+    height: 50px;
+    background-color: #122857;
+    display: inline-block;
+    z-index: -1;
+}
+#leftLeg{
+    display: inline-block;
+    padding:0;
+    animation-name: left-leg;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; 
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards; 
+    animation-delay: 0s; 
+    animation-play-state: paused;
+}
+#LeftFoot{
+    width: 100px;
+    height:50px;
+    max-width: 100px;
+    overflow: visible;
+    max-height: 50px;
+    background-color: #122857;
+    display: inline-block;
+    padding:0;
+    animation-name: left-foot;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; /* default */ 
+    animation-direction: alternate; /* default */ 
+    animation-timing-function: ease; /* default */ 
+    animation-fill-mode: forwards;  /* default */ 
+    animation-delay: 0s; /* default */;
+    animation-play-state: paused;
+}
+#RightTheigh{
+    padding:0;
+    width: 200px;
+    height: 50px;
+    background-color: #122857;
+    display:inline-block;
+    z-index: -1;
+    position:absolute;
+    margin-top:-53px;
+}
+#RightLeg{
+    display: block;
+    padding:0;
+    z-index: -1;
+    position:absolute;
+    animation-name: right-leg;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; 
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards; 
+    animation-delay: 0s; 
+    animation-play-state: paused;
+    z-index: -1;
+}
+#RightFoot{
+    width: 100px;
+    height:50px;
+    background-color: #122857;
+    display:inline-block;
+    padding:0;
+    z-index: 4;
+    margin-top:-53px;
+    position: absolute;
+    margin-left:200px;
+    animation-name: right-foot;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; 
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards;  
+    animation-delay:0s;
+    animation-play-state: paused;
+    z-index: -1;
+}
+
+/* Wheels */
+.wheel{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    color: #fff;
+    margin-bottom: -20px;
+    position: absolute;
+    z-index: -2;
+    animation-name: wheel;
+    animation-duration: 4s; 
+    animation-iteration-count: 1; 
+    animation-direction: alternate; 
+    animation-timing-function: ease; 
+    animation-fill-mode: forwards; 
+    animation-delay: 0s;
+    animation-play-state: paused;
+    z-index: -1;
+}
+#cabChest .wheel{
+    margin-left:-20px;
+    z-index: -20;
+}
+
+#hidewheel{
+    width: 100px;
+    height: 50px;
+    background-color: #bf201b;
+    margin-left:-10px;
+    margin-top:-10px;
+
+}
+
+/*4.Footer */
+footer{
+    color:white;
+    background-color: black;
+    margin-left:-8px;
+    margin-right:-8px;
+    position: fixed;
+    Width: 100%;
+    bottom: 0;
+    z-index: 100;
+    height:2.4em;
+}
+/*5.Animations */
+    /* Truck animation */
+        /* Left-Leg */
+@keyframes left-leg{
+    0%{
+        margin-left:-50px;
+    }100%{
+        top:50px;
+        transform: rotate(90deg) scaley(0.8);
+        transform-origin: 0% 0%;
+        margin-right: 50px;
+    }
+}
+@keyframes left-foot{
+    100%{
+        transform: rotate(85deg);
+        transform-origin: 0% 0%;
+    }
+} 
+        /* Right-Leg */
+@keyframes right-leg{
+    0%{           
+        margin-left:-50px;
+    }100%{
+        transform: rotate(95deg) scaley(0.8);
+        transform-origin: 0% 0%;
+        margin-left:-120px;
+        margin-top:-45px
+    }
+}
+@keyframes right-foot{
+       
+    100%{
+        transform: rotate(90deg);
+        transform-origin: 0% 0%;
+    }
+} 
+        /* Arms */
+@keyframes left-arm{
+    100%{
+        transform: rotate(75deg);
+        transform-origin: 50% 50%; 
+    }
+} 
+@keyframes left-forarm{
+    100%{
+        transform: rotate(-80deg)  scaley(0.8);
+        transform-origin: 10% 100%;
+        margin-bottom: -10px;
+        margin-right:-50px;
+    }
+} 
+@keyframes left-hand{
+    100%{
+        transform: scalex(1.5);
+        background-color: #122857;
+
+    }
+} 
+@keyframes right-forarm{
+    100%{
+        transform: rotate(-45deg)  scaley(1.2);
+        transform-origin: 0% 100%;
+        background-color:#be4322;
+    }
+} 
+@keyframes right-hand{
+    100%{
+        transform:   scalex(1.5) ;
+        background-color: #122857;
+
+    }
+} 
+@keyframes head-flip{
+    100%{
+        transform: rotate(180deg);
+        transform-origin: 50% 0%;
+        background-color: #122857;
+    }
+} 
+@keyframes wheel{
+    100%{
+        transform:   scale(0) 
+    }
+} 
+@keyframes eyes{
+    100%{
+        background-color: black;
+    }
+} 
+        /* Smoke Animation */
+@keyframes smoke1{
+    100%{
+        opacity: 0;
+         transform: scale(4) translate(10px, -50px);    }
+} 
+@keyframes smoke2{
+    100%{
+        opacity: 0;
+         transform: scale(2) translate(10px, -30px);    }
+} 
+@keyframes smoke2{
+    100%{
+        opacity: 0;
+         transform: scalex(3) scaleY(2.8) translate(15px, -60px);    }
+} 
+/* Driving on to screen animation*/
+  @keyframes drive-in {
+    0% {
+      transform: translate(1000px, 0px);
+    }
+
+    100% {
+      transform: translate(0, 0px);
+    }
+  }
+  @keyframes wiggle{
+   100%{
+        transform: rotate(360deg);        
+    }
+}
+@keyframes h1colorchange{
+    10%{
+        color:blue;
+    }20%{  
+        color:#bf201b;
+    }30%{
+        color:blue;
+    }40%{
+        color:#bf201b;
+    }50%{
+        color:blue;
+    }60%{
+        color:#bf201b;
+    }70%{
+        color:blue;
+    }80%{
+        color:#bf201b;
+    }90%{  
+        color:blue;
+    }100%{
+        color:#bf201b;   
+    }
+}
+        /* On hover Arm movements */
+@keyframes left-arm-move{
+    50%{
+        transform: rotate(20deg);
+    }
+} 
+@keyframes right-forarm-move{
+    50%{
+        transform: rotate(20deg);
+    }
+} 
+/*6.Media Queries*/
+    /* Tablet */
+@media all and (max-width:800px) {
+    #truck{
+        margin-left:0;
+        margin-top:25px;
+        }
+    #truckMargin{
+        transform: scale(.5);
+        margin-left:50px;
+    }
+    nav{
+        font-size:.9em;
+    }
+    p{
+        margin-left:50px;
+        margin-right:50px;
+    }
+    #playstate{
+        margin-left:50px;
+        text-align: center;
+    }
+    #centerbutton{
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+    /* Phone */
+
+@media all and (max-width:580px) {
+    h1{
+        font-size: 2em;
+    }
+    #truckMargin{
+        position: absolute;
+        left: -10000px;
+        width: 1px;
+        height: 1px;        
+    }
+    #playstate{
+        position: absolute;
+        left: -10000px;
+        width: 1px;
+        height: 1px;    
+    }
+    #message{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-left:5px;
+    }
+    p{
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    nav{
+        font-size:.5em;
+    }
+    header{
+       
+        padding-left:0px;
+        padding-bottom:10px;
+        padding-right:0px;
+        height:75px;
+    }
+    li{ 
+        float:left;
+    }
+
+}
+
+
